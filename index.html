@@ -26,7 +26,9 @@
     </style>
 </head>
 <body>
-    <h1 id="loading-message">This is for sivle</h1>
+    <img src="img.jpg">
+    <br><br><br><br>
+    <h1 id="loading-message">LOADING...</h1>
     <video id="rickroll-video" autoplay muted>
         <source src="rickroll.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -37,7 +39,7 @@
 
         // Show loading message until video starts playing
         video.addEventListener('playing', () => {
-            loadingMessage.textContent = ''; // Remove loading message when video starts playing
+            loadingMessage.textContent = 'This is for sivle'; // Remove loading message when video starts playing
         });
 
         // Change loading message if the video fails to load
