@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rickroll</title>
+    <title>Minecraft Server</title>
     <style>
         body {
             display: flex;
@@ -26,10 +26,24 @@
     </style>
 </head>
 <body>
-    <h1>This is for sivle</h1>
+    <h1 id="loading-message">This is for sivle</h1>
     <video id="rickroll-video" autoplay muted>
         <source src="rickroll.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <script>
+        const video = document.getElementById('rickroll-video');
+        const loadingMessage = document.getElementById('loading-message');
+
+        // Show loading message until video starts playing
+        video.addEventListener('playing', () => {
+            loadingMessage.textContent = ''; // Remove loading message when video starts playing
+        });
+
+        // Change loading message if the video fails to load
+        video.addEventListener('error', () => {
+            loadingMessage.textContent = 'Failed to load video.';
+        });
+    </script>
 </body>
 </html>
